@@ -49,18 +49,18 @@ public extension AdManager {
     }
     
     struct Config {
-        let identifier: AdIdentifier
-        let type: AdType
-        let unitId: String
+        public let identifier: AdIdentifier
+        public let type: AdType
+        public let unitId: String
         
         /// max preload ad
-        let preloadLimit: Int
+        public let preloadLimit: Int
         
         /// when reach error limit, will pause preload logic
-        let preloadErrorLimit: Int
+        public let preloadErrorLimit: Int
         
         /// when preload logic is paused, after `preloadRestartTimeInterval` seconds it will restart
-        let preloadRestartTimeInterval: TimeInterval
+        public let preloadRestartTimeInterval: TimeInterval
         
         var debugInfo: String {
             return "[id: \(identifier), type: \(type), unitId: \(unitId)]"
